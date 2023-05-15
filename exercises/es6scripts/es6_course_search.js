@@ -37,17 +37,23 @@ let courses = [
 ];
 
 // When does the PROG200 course start?
-function findCourseByCourseId(courseId) {}
-function isPROG200(arrayValue) {
-  if (arrayValue == "") {
+// Find me the course with PROG200
+
+function isPROG200(course) {
+  if (course.CourseId == "PROG200") {
     return true;
   } else {
     return false;
   }
 }
 
-courses.find()
+// get data
+let course = courses.find(isPROG200);
 
+//display data
+if (course != undefined) {
+  console.log(`${course.Title} starts on ${course.StartDate}`);
+}
 
 // What is the title of the PROJ500 course?
 
