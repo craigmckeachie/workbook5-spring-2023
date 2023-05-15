@@ -40,24 +40,30 @@ let courses = [
 // Find me the course with PROG200
 
 function isPROG200(course) {
-  if (course.CourseId == "PROG200") {
-    return true;
-  } else {
-    return false;
-  }
+  return course.CourseId == "PROG200";
 }
 
 // get data
-let course = courses.find(isPROG200);
+let course1 = courses.find(isPROG200);
 
 //display data
-if (course != undefined) {
-  console.log(`${course.Title} starts on ${course.StartDate}`);
+if (course1) {
+  console.log(`${course1.Title} starts on ${course1.StartDate}`);
 }
 
+function isIntroductionToAngular(course) {
+  return course.Title == "Introduction to Angular";
+}
 // What is the title of the PROJ500 course?
+// let course2 = courses.find(isIntroductionToAngular);
+let course2 = courses.find(function (course) {
+  return course.Title == "Introduction to Angular";
+});
 
-function findCourseByCourseTitle(courseTitle) {}
+if (course2) {
+  console.log(course2.Title);
+}
+
 // What are the titles of the courses that cost $50 or less?
-function filter(params) {}
+
 // What classes meet in "Classroom 1"?
