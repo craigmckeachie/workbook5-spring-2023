@@ -51,6 +51,7 @@ if (course1) {
   console.log(`${course1.Title} starts on ${course1.StartDate}`);
 }
 
+console.log("==================");
 function isIntroductionToAngular(course) {
   return course.Title == "Introduction to Angular";
 }
@@ -64,6 +65,18 @@ if (course2) {
   console.log(course2.Title);
 }
 
-// What are the titles of the courses that cost $50 or less?
+console.log("==================");
 
-// What classes meet in "Classroom 1"?
+// What are the titles of the courses that cost $50 or less?
+let courses1 = courses.filter(function (course) {
+  return Number(course.Fee) <= 50;
+});
+
+console.log(courses1);
+
+console.log("=========What classes meet in 'Classroom 1'?=========");
+let courses2 = courses.filter(function (course) {
+  return course.Location == "Classroom 1";
+});
+
+console.log(courses2);
