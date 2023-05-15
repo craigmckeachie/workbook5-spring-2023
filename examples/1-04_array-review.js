@@ -33,6 +33,7 @@ let statesInfo = [
   },
 ];
 
+
 function displayStates(states) {
   for (const stateInfo of states) {
     console.log(stateInfo.state);
