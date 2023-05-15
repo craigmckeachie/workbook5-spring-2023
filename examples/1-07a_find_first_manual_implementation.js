@@ -15,14 +15,14 @@ function find(numbers, isOver60) {
   return undefined;
 }
 
-function find(array, conditionFn) {
-  for (const value of array) {
-    if (conditionFn(value)) {
-      return value;
-    }
-  }
-  return undefined;
-}
+// function find(array, conditionFn) {
+//   for (const value of array) {
+//     if (conditionFn(value)) {
+//       return value;
+//     }
+//   }
+//   return undefined;
+// }
 
 let numbers = [7, 9, 64, 60, 12, 13, 65, 62];
 let firstValOver60 = find(numbers, isOver60); // returns 64
