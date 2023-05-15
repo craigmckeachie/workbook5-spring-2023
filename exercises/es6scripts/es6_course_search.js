@@ -36,9 +36,9 @@ let courses = [
   },
 ];
 
-// When does the PROG200 course start?
-// Find me the course with PROG200
+console.log("========When does the PROG200 course start?==========");
 
+// Find me the course with PROG200
 function isPROG200(course) {
   return course.CourseId == "PROG200";
 }
@@ -51,11 +51,12 @@ if (course1) {
   console.log(`${course1.Title} starts on ${course1.StartDate}`);
 }
 
-console.log("==================");
+console.log();
+console.log("========What is the title of the PROJ500 course?==========");
 function isIntroductionToAngular(course) {
   return course.Title == "Introduction to Angular";
 }
-// What is the title of the PROJ500 course?
+
 // let course2 = courses.find(isIntroductionToAngular);
 let course2 = courses.find(function (course) {
   return course.Title == "Introduction to Angular";
@@ -65,15 +66,17 @@ if (course2) {
   console.log(course2.Title);
 }
 
-console.log("==================");
-
-// What are the titles of the courses that cost $50 or less?
+console.log();
+console.log(
+  "========What are the titles of the courses that cost $50 or less?=========="
+);
 let courses1 = courses.filter(function (course) {
   return Number(course.Fee) <= 50;
 });
 
 console.log(courses1);
 
+console.log();
 console.log("=========What classes meet in 'Classroom 1'?=========");
 let courses2 = courses.filter(function (course) {
   return course.Location == "Classroom 1";
