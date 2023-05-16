@@ -2002,10 +2002,10 @@ const movies = [
   },
 ];
 
-const foundMovie = movies.find(function (movie) {
-  return movie.title == "The Godfather";
+const filteredMovies = movies.filter(function (movie) {
+  return movie.year == 1994;
 });
 
-if (foundMovie) {
-  console.log(foundMovie);
-}
+// const filteredMovies = movies.filter(m => m.year == 1994);
+
+console.log(filteredMovies);
