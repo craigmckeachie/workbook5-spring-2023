@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Scripting Inline</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.classless.min.css"
+    />
   </head>
   <body>
     <main>
@@ -17,7 +21,7 @@
     </main>
     <script>
       const messageParagraph = document.querySelector("#message-paragraph");
-      messageParagraph.innerText = "This is a changed paragraph.";
+      messageParagraph.innerText = " This is a changed paragraph.";
       messageParagraph.style.border = "1px solid red";
       messageParagraph.style.color = "red";
     </script>
