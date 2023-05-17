@@ -10,4 +10,5 @@ for (let propertyName in person) {
 // console.log(person["name"]);
 // console.log(person["age"]);
 
-
+//you loop through arrays using for of
+//you loop through an object using for in
