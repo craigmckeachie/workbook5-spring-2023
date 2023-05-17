@@ -30,7 +30,7 @@ const messageParagraph = document.querySelector("#message-paragraph");
 ```
 
 ```js
-const messageParagraphs = document.getElemenstByClassName("fancy");
+const messageParagraphs = document.getElementsByClassName("fancy");
 ```
 
 ```js
@@ -46,7 +46,7 @@ const messageParagraphs = document.querySelectorAll(".fancy");
 ```
 
 ```js
-const messageParagraphs = document.getElemenstByTagName("p");
+const messageParagraphs = document.getElementsByTagName("p");
 ```
 
 ```js
@@ -55,5 +55,7 @@ const messageParagraphs = document.querySelectorAll("p");
 
 ### Returns
 
-- `HTMLCollection`
-  - [`HTMLParagraphElement`, `HTMLParagraphElement`]= `<p>...</p><p>....</p><p>...</p>`
+- `HTMLCollection` of `HTMLElement`s
+  - [`HTMLParagraphElement`, `HTMLParagraphElement`, `HTMLParagraphElement`]
+    - array like but not quit an array
+  - `<p>...</p><p>....</p><p>...</p>`
