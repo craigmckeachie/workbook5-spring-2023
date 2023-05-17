@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scripting Inline</title>
+  </head>
+  <body>
+    <main>
+      <p id="message-paragraph">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore possimus
+        eligendi iusto odio consequuntur doloremque quo velit tenetur sed illo
+        nam cum aliquam, accusantium autem dicta eius! Praesentium, neque
+        corrupti.
+      </p>
+    </main>
+    <script>
+      const messageParagraph = document.querySelector("#message-paragraph");
+      messageParagraph.innerText = "This is a changed paragraph.";
+      messageParagraph.style.border = "1px solid red";
+      messageParagraph.style.color = "red";
+    </script>
+  </body>
+</html>
