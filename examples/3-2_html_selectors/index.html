@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Selectors</title>
+  </head>
+  <body>
+    <main>
+      <p id="message-paragraph">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore possimus
+        eligendi iusto odio consequuntur doloremque quo velit tenetur sed illo
+        nam cum aliquam, accusantium autem dicta eius! Praesentium, neque
+        corrupti.
+      </p>
+    </main>
+    <script>
+      const messageParagraph1 = document.getElementById("message-paragraph");
+      console.log(messageParagraph1);
+      messageParagraph1.innerText = "This is a changed paragraph.";
+      const messageParagraph2 = document.querySelector("#message-paragraph");
+      console.log(messageParagraph2);
+    </script>
+  </body>
+</html>
