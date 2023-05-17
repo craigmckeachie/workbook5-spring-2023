@@ -51,10 +51,16 @@
     </main>
     <script>
       const messageParagraphs = document.querySelectorAll("p");
-      messageParagraphs.forEach((p) => console.log(p.innerText));
+      // messageParagraphs.forEach((p) => console.log(p.innerText));
+      for (const paragraph of messageParagraphs) {
+        console.log(paragraph.innerText);
+      }
 
       const listItems = document.querySelectorAll(".item");
-      listItems.forEach((p) => console.log(p.innerText));
+      // listItems.forEach((p) => console.log(p.innerText));
+      for (const listItem of listItems) {
+        console.log(listItem.innerText);
+      }
     </script>
   </body>
 </html>
