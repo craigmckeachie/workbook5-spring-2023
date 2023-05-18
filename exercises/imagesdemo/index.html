@@ -14,31 +14,38 @@
   <body>
     <main>
       <div>
-        <img src="https://placewaifu.com/image/200?greyscale&1000" />
+        <img src="" />
         <p>describe image above</p>
       </div>
       <div>
-        <img src="https://placewaifu.com/image/200?greyscale&1001" />
+        <img src="" />
         <p>describe image above</p>
       </div>
       <div>
-        <img src="https://placewaifu.com/image/200?greyscale&1002" />
+        <img src="" />
         <p>describe image above</p>
       </div>
     </main>
     <script>
       const paragraphs = document.querySelectorAll("p");
+      let count = 1;
       for (const paragraph of paragraphs) {
         paragraph.style.border = "1px solid black";
         //added next two lines to improve layout, not a requirement
         paragraph.style.marginTop = "1rem";
         paragraph.style.padding = ".5rem";
+        paragraph.innerText = `describe image${count} above`;
+        count++;
       }
 
       const images = document.querySelectorAll("img");
-      images.forEach((image) => {
+
+      images.forEach((image, index) => {
         image.classList.add("roundedImg");
         image.alt = "anime image";
+        image.src = `https://placewaifu.com/image/200?greyscale&${
+          index + 1000
+        }`;
       });
     </script>
   </body>
