@@ -30,10 +30,16 @@
       const paragraphs = document.querySelectorAll("p");
       for (const paragraph of paragraphs) {
         paragraph.style.border = "1px solid black";
+        //added next two lines to improve layout, not a requirement
         paragraph.style.marginTop = "1rem";
+        paragraph.style.padding = ".5rem";
       }
 
-      
+      const images = document.querySelectorAll("img");
+      images.forEach((image) => {
+        image.classList.add("roundedImg");
+        image.alt = "anime image";
+      });
     </script>
   </body>
 </html>
