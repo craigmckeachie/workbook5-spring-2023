@@ -26,6 +26,14 @@
         <p>describe image above</p>
       </div>
     </main>
-    <script></script>
+    <script>
+      const paragraphs = document.querySelectorAll("p");
+      for (const paragraph of paragraphs) {
+        paragraph.style.border = "1px solid black";
+        paragraph.style.marginTop = "1rem";
+      }
+
+      
+    </script>
   </body>
 </html>
