@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dynamic Images</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.classless.min.css"
+    />
+  </head>
+  <body>
+    <main>
+      <label for="image-list">Albums</label>
+      <select name="images" id="image-list">
+        <option value="">Select Album. . .</option>
+      </select>
+
+      <button onclick="addImage();">Add Album</button>
+      <button onclick="clearImages();">Clear Albums</button>
+
+      <div id="images-div"></div>
+    </main>
+
+    <script>
+      "use strict";
+      let imageFiles = [
+        { name: "images/illmatic.jpeg", description: "Illmatic" },
+        { name: "images/radio.jpeg", description: "Radio" },
+        { name: "images/paid-in-full.jpeg", description: "Paid In Full" },
+        {
+          name: "images/the-low-end-theory.jpeg",
+          description: "The Low End Theory",
+        },
+        {
+          name: "images/it-takes-a-nation-of-millions.jpeg",
+          description: "It Takes a Nation of Millions",
+        },
+      ];
+
+      const imageList = document.querySelector("select#image-list");
+      const imagesDiv = document.querySelector("div#images-div");
+
+      function loadImageList() {
+        for (const imageFile of imageFiles) {
+          let option = document.createElement("option");
+          option.value = imageFile.name;
+          option.textContent = imageFile.description;
+
+          imageList.appendChild(option);
+        }
+      }
+
+      loadImageList();
+
+      function addImage() {
+        if (!imageList.value) return;
+
+        const imageName = imageList.value;
+        const imageFile = imageFiles.find((image) => image.name === imageName);
+
+        const image = document.createElement("img");
+        image.src = imageFile.name;
+        image.alt = imageFile.description;
+        imagesDiv.append(image);
+      }
+
+      function clearImages() {
+        imagesDiv.innerHTML = "";
+      }
+    </script>
+  </body>
+</html>
