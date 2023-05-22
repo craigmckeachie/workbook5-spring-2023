@@ -12,7 +12,11 @@
   </head>
   <body>
     <main>
-      <select name="categories" id="category-list"></select>
+      <select
+        name="categories"
+        id="category-list"
+        onchange="handleCategoryChanged();"
+      ></select>
       <table>
         <thead>
           <tr>
@@ -150,6 +154,7 @@
       const activitiesTableBody = document.querySelector(
         "#activities-tbl-body"
       );
+
       function loadCategoryList() {
         let option = new Option("Select Category...", "");
         categoryList.appendChild(option);
@@ -176,13 +181,20 @@
         cell3.innerText = "$" + activity.price.toFixed(2);
       }
 
-      function loadActivitiesTable() {
-        for (const activity of activities) {
+      function loadActivitiesTable(category) {
+        activitiesTableBody.innerHTML = "";
+        const filteredActivities = activities.filter(
+          (activity) => activity.category == category
+        );
+        for (const activity of filteredActivities) {
           buildActivityRow(activitiesTableBody, activity);
         }
       }
 
-      loadActivitiesTable();
+      function handleCategoryChanged() {
+        const category = categoryList.value;
+        loadActivitiesTable(category);
+      }
     </script>
   </body>
 </html>
